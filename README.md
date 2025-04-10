@@ -1,6 +1,15 @@
-# 🔗 jorgeteixe's links @ links.teixe.es
+# 🔗 jorgeteixe's links page
 
-A modern, clean, and responsive personal links page built with Astro. This project serves as a centralized hub for your online presence, featuring your social media profiles and other content.
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Astro](https://img.shields.io/badge/Astro-4.0.0-FF5D01?logo=astro&logoColor=white)](https://astro.build)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+
+A modern, clean, and responsive personal links page built with Astro. This project serves as a centralized hub for your online presence, featuring your social media profiles and upcoming content.
+
+## Showcase
+
+![Links Demo](images/demo.png)
 
 ## Features
 
@@ -91,4 +100,5 @@ This project can be deployed to any static hosting service. Some popular options
 ## License
 
 This project is open source and available under the [GPL-3.0](LICENSE).
+
 © 2025 Jorge Teixeira. All rights reserved.
