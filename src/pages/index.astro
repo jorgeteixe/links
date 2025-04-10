@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+
+const PROFILE_IMAGE = `https://avatars.githubusercontent.com/u/45232371`;
+
+const socialLinks = [
+	{
+		name: 'X (Twitter)',
+		icon: 'social/x',
+		url: 'https://x.com/jorgeteixe_',
+	},
+	{
+		name: 'LinkedIn',
+		icon: 'mdi:linkedin',
+		url: 'https://linkedin.com/in/jorge-teixeira-crespo',
+	},
+	{
+		name: 'Instagram',
+		icon: 'mdi:instagram',
+		url: 'https://instagram.com/jorgeteixe_',
+	},
+	{
+		name: 'Bluesky',
+		icon: 'social/bluesky',
+		url: 'https://bsky.app/profile/teixe.es',
+	},
+	{
+		name: 'GitHub',
+		icon: 'mdi:github',
+		url: 'https://github.com/jorgeteixe',
+	},
+	{
+		name: 'Portfolio',
+		icon: 'mdi:web',
+		url: 'https://teixe.es',
+	},
+];
+---
+
+<Layout title="Jorge Teixeira's Links">
+	<div class="text-center space-y-6 max-w-2xl">
+		<!-- Profile Section -->
+		<div class="space-y-4">
+			<img
+				src={PROFILE_IMAGE}
+				alt="Jorge Teixeira"
+				class="w-40 h-40 rounded-[2rem] mx-auto shadow-lg border-4 border-white/50"
+			/>
+			<div class="space-y-1">
+				<h1 class="text-3xl font-bold text-gray-800">Jorge Teixeira</h1>
+				<p class="text-gray-600 text-lg max-w-xs mx-auto">FOSS advocate ― travel 🛫, community 👥 and computers 💻</p>
+			</div>
+		</div>
+
+		<!-- Social Links -->
+		<div class="flex justify-center gap-6">
+			{socialLinks.map((link) => (
+				<a
+					href={link.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-gray-700 hover:text-gray-900 transition-colors"
+					title={link.name}
+				>
+					<Icon name={link.icon} class="w-8 h-8" />
+				</a>
+			))}
+		</div>
+
+		<!-- Divider -->
+		<div class="border-t border-gray-200 my-8"></div>
+
+		<!-- Placeholder Cards -->
+		<div class="space-y-4">
+			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
+				<p class="text-gray-400 italic">Coming soon...</p>
+			</div>
+			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
+				<p class="text-gray-400 italic">Coming soon...</p>
+			</div>
+			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
+				<p class="text-gray-400 italic">Coming soon...</p>
+			</div>
+		</div>
+	</div>
+</Layout>
