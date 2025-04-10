@@ -1,22 +1,39 @@
 ---
 import '../styles/global.css';
-import { Icon } from 'astro-icon/components';
+import { NAME, SUBTITLE } from '../data/constants';
 
 interface Props {
-	title: string;
+	title?: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title = `${NAME}'s Links`, description = SUBTITLE } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Jorge Teixeira's Links" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://links.teixe.es/" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://links.teixe.es/opengraph.webp" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://links.teixe.es/" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="https://links.teixe.es/opengraph.webp" />
+
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex flex-col">
@@ -24,7 +41,7 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 		<footer class="text-center text-sm text-gray-500 py-4">
-			<div>© {new Date().getFullYear()} Jorge Teixeira. All rights reserved.</div>
+			<div>© {new Date().getFullYear()} {NAME}. All rights reserved.</div>
 		</footer>
 	</body>
 </html>

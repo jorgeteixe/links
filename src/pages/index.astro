@@ -1,55 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+import { NAME, SUBTITLE, PROFILE_IMAGE, SOCIAL_LINKS, COMING_SOON_TEXT } from '../data/constants';
 
-const PROFILE_IMAGE = `https://avatars.githubusercontent.com/u/45232371`;
-
-const socialLinks = [
-	{
-		name: 'X (Twitter)',
-		icon: 'social/x',
-		url: 'https://x.com/jorgeteixe_',
-	},
-	{
-		name: 'LinkedIn',
-		icon: 'mdi:linkedin',
-		url: 'https://linkedin.com/in/jorge-teixeira-crespo',
-	},
-	{
-		name: 'Instagram',
-		icon: 'mdi:instagram',
-		url: 'https://instagram.com/jorgeteixe_',
-	},
-	{
-		name: 'Bluesky',
-		icon: 'social/bluesky',
-		url: 'https://bsky.app/profile/teixe.es',
-	},
-	{
-		name: 'GitHub',
-		icon: 'mdi:github',
-		url: 'https://github.com/jorgeteixe',
-	},
-	{
-		name: 'Portfolio',
-		icon: 'mdi:web',
-		url: 'https://teixe.es',
-	},
-];
+const socialLinks = SOCIAL_LINKS;
 ---
 
-<Layout title="Jorge Teixeira's Links">
+<Layout>
 	<div class="text-center space-y-6 max-w-2xl">
 		<!-- Profile Section -->
 		<div class="space-y-4">
 			<img
 				src={PROFILE_IMAGE}
-				alt="Jorge Teixeira"
+				alt={NAME}
 				class="w-40 h-40 rounded-[2rem] mx-auto shadow-lg border-4 border-white/50"
 			/>
 			<div class="space-y-1">
-				<h1 class="text-3xl font-bold text-gray-800">Jorge Teixeira</h1>
-				<p class="text-gray-600 text-lg max-w-xs mx-auto">FOSS advocate ― travel 🛫, community 👥 and computers 💻</p>
+				<h1 class="text-3xl font-bold text-gray-800">{NAME}</h1>
+				<p class="text-gray-600 text-lg max-w-xs mx-auto">{SUBTITLE}</p>
 			</div>
 		</div>
 
@@ -74,13 +42,13 @@ const socialLinks = [
 		<!-- Placeholder Cards -->
 		<div class="space-y-4">
 			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
-				<p class="text-gray-400 italic">Coming soon...</p>
+				<p class="text-gray-400 italic">{COMING_SOON_TEXT}</p>
 			</div>
 			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
-				<p class="text-gray-400 italic">Coming soon...</p>
+				<p class="text-gray-400 italic">{COMING_SOON_TEXT}</p>
 			</div>
 			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
-				<p class="text-gray-400 italic">Coming soon...</p>
+				<p class="text-gray-400 italic">{COMING_SOON_TEXT}</p>
 			</div>
 		</div>
 	</div>

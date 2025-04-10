@@ -9,7 +9,7 @@ A modern, clean, and responsive personal links page built with Astro. This proje
 
 ## Showcase
 
-![Links Demo](images/demo.png)
+![Links Demo](public/opengraph.webp)
 
 ## Features
 
@@ -62,25 +62,23 @@ yarn dev
 
 ### Profile Information
 
-Edit the following in `src/pages/index.astro`:
-- Profile image URL
-- Name
-- Bio text
-- Social media links
+All personal information and content is centralized in `src/data/constants.ts`. Edit this file to customize:
 
-### Social Links
+```typescript
+export const PROFILE_IMAGE = 'your-profile-image-url';
+export const NAME = 'Your Name';
+export const SUBTITLE = 'Your subtitle or tagline';
 
-Add or modify social links in the `socialLinks` array in `src/pages/index.astro`:
-
-```javascript
-const socialLinks = [
+export const SOCIAL_LINKS = [
   {
     name: 'Platform Name',
     icon: 'icon-name',
     url: 'https://your-profile-url',
   },
-  // Add more links as needed
+  // Add more social links as needed
 ];
+
+export const COMING_SOON_TEXT = 'Your custom coming soon message';
 ```
 
 ### Icons
