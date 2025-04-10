@@ -99,6 +99,6 @@ This project can be deployed to any static hosting service. Some popular options
 
 ## License
 
-This project is open source and available under the [GPL-3.0](LICENSE).
+This project is open source and available under the [GPL-3.0-or-later](LICENSE).
 
 © 2025 Jorge Teixeira. All rights reserved.
