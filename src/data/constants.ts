@@ -35,4 +35,25 @@ export const SOCIAL_LINKS = [
 	},
 ];
 
-export const COMING_SOON_TEXT = 'Coming soon...'; 
+export const EVENTS = [
+	{
+		name: 'GPUL',
+		description: 'Promoting open source since 1999. Events, talks, worshops and community.',
+		image: 'https://gpul.org/img/logo.svg',
+		url: 'https://gpul.org/',
+	},
+	{
+		name: 'HackUDC',
+		description: 'Galicia\'s biggest student hackathon. 3 days of code, creativity and community.',
+		image: 'https://raw.githubusercontent.com/gpul-org/hackudc-2025/refs/heads/main/src/assets/hackudc.svg',
+		url: 'https://hackudc.gpul.org/',
+		darkLogo: true,
+	},
+	{
+		name: 'Atlántica Conf',
+		description: 'A conference for developers and tech enthusiasts on the Atlantic coast.',
+		image: 'https://atlanticaconf.com/img/logo_alt_hero.png',
+		url: 'https://atlanticaconf.com/',
+		darkLogo: true,
+	}
+]

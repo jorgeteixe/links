@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
-import { NAME, SUBTITLE, PROFILE_IMAGE, SOCIAL_LINKS, COMING_SOON_TEXT } from '../data/constants';
+import { NAME, SUBTITLE, PROFILE_IMAGE, SOCIAL_LINKS, EVENTS } from '../data/constants';
 
 const socialLinks = SOCIAL_LINKS;
 ---
@@ -39,17 +39,27 @@ const socialLinks = SOCIAL_LINKS;
 		<!-- Divider -->
 		<div class="border-t border-gray-200 my-8"></div>
 
-		<!-- Placeholder Cards -->
-		<div class="space-y-4">
-			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
-				<p class="text-gray-400 italic">{COMING_SOON_TEXT}</p>
-			</div>
-			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
-				<p class="text-gray-400 italic">{COMING_SOON_TEXT}</p>
-			</div>
-			<div class="p-4 bg-white/50 rounded-lg border-2 border-dashed border-gray-300 text-center">
-				<p class="text-gray-400 italic">{COMING_SOON_TEXT}</p>
-			</div>
+		<!-- Cards -->
+		<div class="max-w-md mx-auto space-y-4">
+			{EVENTS.map((event) => (
+				<div class="p-4 bg-white/50 rounded-lg border border-solid border-indigo-200 text-center">
+					<a href={event.url} target="_blank" rel="noopener noreferrer">
+						<div class="flex items-center gap-4 text-left">
+							<img
+								src={event.image}
+								alt={`${event.name} logo`}
+								class={`h-20 w-20 object-contain rounded-md p-2 ${
+									event.darkLogo ? 'bg-gray-800' : 'bg-transparent'
+								}`}
+							/>
+							<div>
+								<h2 class="text-xl font-semibold text-gray-800">{event.name}</h2>
+								<p class="text-gray-600 text-sm md:text-base">{event.description}</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			))}
 		</div>
 	</div>
 </Layout>
