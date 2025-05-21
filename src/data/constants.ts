@@ -43,11 +43,10 @@ export const EVENTS = [
 		url: 'https://gpul.org/',
 	},
 	{
-		name: 'HackUDC',
-		description: 'Galicia\'s biggest student hackathon. 3 days of code, creativity and community.',
-		image: 'https://raw.githubusercontent.com/gpul-org/hackudc-2025/refs/heads/main/src/assets/hackudc.svg',
-		url: 'https://hackudc.gpul.org/',
-		darkLogo: true,
+		name: 'Slides DORS/CLUC',
+		description: 'Open Source Compliance make simple ✨: what every dev should know',
+		image: '/slides-img.png',
+		url: 'https://cloud.gpul.org/index.php/s/HT9FFyB6gYHspjG',
 	},
 	{
 		name: 'Atlántica Conf',
